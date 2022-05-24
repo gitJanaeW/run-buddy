@@ -1,9 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*NOTE: As opposed to the default content-size which
+    tracks the box size of the content ONLY, border-box tracks
+    the content box as well as the padding and border of the
+    content. Changing the default will change how the computer
+    processes your box-styling*/
+}
+
 header{
+    background: #39a6b2;
+    /*Why can we use "background" here instead of
+    "background-color"? What's the difference?*/
+    width: 100%;
     padding: 20px 35px;
-    background-color: #39a6b2;;
+}
+
+header h1{
+    display: inline;
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #fce138;
+}
+
+header nav{
+    float: right;
+    margin: 7px 0;
+
+ }
+
+header nav ul li{
+    display: inline;
+}
+
+header nav ul li a{
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
 }
 
 body{
     color:#39a6b2;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+section{
+    padding: 60px;
+}
+
+.hero{
+    background-image: url("../images/hero-bg.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.signUp{
+    background-color: #fce138;
+    border: 3px solid #024e76;
+    padding: 20px;
+    width: 500px;
+    color:#024e76;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+}
+
+.signUp h3{
+    margin: 5px 0 15px 0;
+
+}
+
+.formInp{
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color:#024e76;
+    width: 100%;
+    margin-bottom: 15px;;
+}
+
+.hero label{
+    margin: 0 5px;
+}
+
+button{
+    background-color: #024e76;
+    color: #fce138;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.infoSec{
+    text-align: center;
+    width: 800px;
+}
+
+footer{
+    background: #fce138;
+    width: 100%;
+        /*NOTE: width: 100%; means this element will be the full width of its parent*/
+    padding: 40px 35px;
+    /*Why is the padding necessary when we've already
+    gotten rid of all marigns/padding with the * selector?*/
+}
+
+footer h2{
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+    /*Why is margin: 0; necessary when the margin
+    for the entire page is 0 already?*/
+}
+
+footer div{
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+}
+
+footer a{
+    color: #024e76;
 }
