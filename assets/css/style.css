@@ -115,7 +115,7 @@ button{
 }
 .intro p{
     width: 80%;
-    margin: auto 0;
+    margin: 0 auto;
         /*margin: auto 0; fies the centering issue that occurs when you center text
         and then lessen its width*/
 }
@@ -184,6 +184,54 @@ button{
 .textRight{
     text-align: right;
 }
+
+.contact{
+    text-align: center;
+    background-color: #024e76;
+}
+.contact h2{
+    color:#fce138;
+}
+.contactInfo iframe{
+    width: 400px;
+    height: 400px;
+    border-style: 0;
+}
+.contactInfo div{
+    width: 410px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 30px 0 0 60px;
+    color: white;
+}
+.contactInfo h3{
+    color: #fce138;
+    font-size: 32px;
+}
+.contactInfo p, .contactInfo address{
+    margin: 20px 0;
+    font-size: 20px;
+    font-style: normal;
+}
+.contactInfo a{
+    color: #fce138;
+}
+
+/*My attempt
+.addressInfo{
+    text-align: left;
+}
+.addressInfo h3{
+    color:#fce138;
+}
+.addressInfo p, address{
+    color: white;
+}
+.addressInfo a{
+    color:#fce138;
+}
+*/
 
 footer{
     background: #fce138;
