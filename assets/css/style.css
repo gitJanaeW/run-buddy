@@ -13,7 +13,6 @@ header{
     background: #39a6b2;
     /*Why can we use "background" here instead of
     "background-color"? What's the difference?*/
-    width: 100%;
     padding: 20px 35px;
 }
 header h1{
