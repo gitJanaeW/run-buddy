@@ -10,13 +10,15 @@
 }
 
 header{
+    display: flex;
+    justify-content: space-between;
     background: #39a6b2;
+    flex-wrap: wrap;
     /*Why can we use "background" here instead of
     "background-color"? What's the difference?*/
     padding: 20px 35px;
 }
 header h1{
-    display: inline;
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
@@ -27,9 +29,7 @@ header a {
     color: #fce138;
 }
 header nav{
-    float: right;
     margin: 7px 0;
-
 }
 header nav ul li{
     display: inline;
