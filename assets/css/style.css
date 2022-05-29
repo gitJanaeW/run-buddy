@@ -111,10 +111,11 @@ button{
 .sectionTitle{
     font-size: 55px;
     color:#024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
     border-bottom: 3px solid;
-    display: inline-block;
 }
 .primaryBorder{
     border-color: #fce138;
@@ -123,12 +124,8 @@ button{
     border-color:#39a6b2
 }
 
-
-.intro{
-    text-align: center;
-
-}
 .intro p{
+    text-align: center;
     width: 80%;
     margin: 0 auto;
         /*margin: auto 0; fies the centering issue that occurs when you center text
@@ -136,7 +133,6 @@ button{
 }
 
 .steps{
-    text-align: center;
         /*You're able to center the imgs with text-align because the parent element is text. You'll want to call on a parent element whenever you're centering an img with text-align*/
     background-color: #fce138;
 }
@@ -199,9 +195,11 @@ button{
 .textRight{
     text-align: right;
 }
+.flex-row{
+    display: flex;
+}
 
 .contact{
-    text-align: center;
     background-color: #024e76;
 }
 .contact h2{
