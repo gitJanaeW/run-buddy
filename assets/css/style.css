@@ -136,24 +136,45 @@ button{
         /*You're able to center the imgs with text-align because the parent element is text. You'll want to call on a parent element whenever you're centering an img with text-align*/
     background-color: #fce138;
 }
-.steps span{
-    font-size: 46px;
+.step{
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
-.steps h3{
+.step-img{
+    flex: 1 12%;
+    margin-right: 20px;
+}
+.step-img img{
+    max-width: 100%;
+}
+.step h3{
+    flex: 1 30%;
     color: #024e76;
     font-size: 38px;
-    margin-top: 10px
 }
-.steps img{
-    width: 15%;
-    margin: 10px 0;
+
+.step-text h4{
+    font-size: 26px;
+    line-height: 1.5px;
+    color: #024e76;
 }
-.steps div{
-    margin-bottom: 80px;
-}
-.steps p{
+.step-text p{
+    flex: 12;
     color:#39a6b2;
-    font-size: 23px;
+    font-size: 18px;
+    padding: 15px;
+}
+.step-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 2 70%;
 }
 
 .trainers{
@@ -230,21 +251,6 @@ button{
 .contactInfo a{
     color: #fce138;
 }
-
-/*My attempt
-.addressInfo{
-    text-align: left;
-}
-.addressInfo h3{
-    color:#fce138;
-}
-.addressInfo p, address{
-    color: white;
-}
-.addressInfo a{
-    color:#fce138;
-}
-*/
 
 footer{
     display: flex;
