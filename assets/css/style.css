@@ -40,7 +40,7 @@ header nav ul{
 header nav ul li a{
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 1.55vw
+    font-size: 1.55vw;
 }
 
 body{
@@ -84,10 +84,12 @@ section{
     border: 3px solid #024e76;
     padding: 20px;
     color:#024e76;
+    width: 40%;
+    margin: 3.5%;
 }
 .signUp h3{
     margin: 5px 0 15px 0;
-
+    font-size:  24px;
 }
 
 .formInp{
@@ -155,11 +157,11 @@ button{
 .step h3{
     flex: 1 30%;
     color: #024e76;
-    font-size: 38px;
+    font-size: 46px;
 }
 
 .step-text{
-    /* Something must be missing here, because the .step-text looks weird */
+    flex: 12;
 }
 .step-text h4{
     font-size: 26px;
@@ -167,7 +169,6 @@ button{
     color: #024e76;
 }
 .step-text p{
-    flex: 12;
     color:#39a6b2;
     font-size: 18px;
     padding: 15px;
@@ -182,13 +183,13 @@ button{
 .trainers{
     width: 100%;
     display: flex;
-    margin: auto;
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .trainer{
     flex: 1;
-    margin: 0 auto 30px;
+    margin: 20px;
     background-color: #024e76;
     color:#fce138;
 }
@@ -267,12 +268,12 @@ button{
     padding: 7px 15px;
     font-size: 16px;
     color: #024e76;
-    width: 100%;
+    width: 95%;
     margin-bottom: 15px;
     margin-top: 5px;
 }
 .contact-form button{
-    width: 100%;
+    width: 95%;
     border: none;
     background:#fce138;
     color: #024e76;
