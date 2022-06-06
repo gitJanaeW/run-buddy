@@ -1,181 +1,241 @@
-:root{
+:root {
     --primary-color: #fce138;
     --secondary-color: #024e76;
     --tertiary-color: #39a6b2;
-}
-
-*{
+  }
+  
+  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /*NOTE: As opposed to the default content-size which
-    tracks the box size of the content ONLY, border-box tracks
-    the content box as well as the padding and border of the
-    content. Changing the default will change how the computer
-    processes your box-styling*/
-}
-
-header{
+        /*NOTE: As opposed to the default content-size which
+      tracks the box size of the content ONLY, border-box tracks
+      the content box as well as the padding and border of the
+      content. Changing the default will change how the computer
+      processes your box-styling*/
+  }
+  
+  body {
+    color: var(--tertiary-color);
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  
+  /* HEADER / NAV BAR STYLES START */
+  
+  header {
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
     display: flex;
     justify-content: space-between;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background: var(--tertiary-color);
     flex-wrap: wrap;
-    /*Why can we use "background" here instead of
-    "background-color"? What's the difference?*/
-    padding: 20px 35px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     background-image: url("../images/hero-bg-flipped.jpg");
     background-size: cover;
-    background-position: center;
-    /* background-attachment: fixed; places the image relevant to the viewport instead of the element*/
     background-attachment: fixed;
+    /* background-attachment: fixed; places the image relevant to the viewport instead of the element*/
     background-position: 80%;
     z-index: 9999;
-}
-header h1{
+  
+  }
+  
+  header h1 {
     font-weight: bold;
+    margin: 0;
     font-size: 36px;
     color: var(--primary-color);
-    margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-header a {
+  }
+  
+  header a {
     text-decoration: none;
     color: var(--primary-color);
-}
-header nav{
+  }
+  
+  header nav {
     margin: 7px 0;
-}
-header nav ul{
+  }
+  
+  header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
-}
-header nav ul li a{
+  }
+  
+  header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-header nav ul li a:hover{
-    background-color: var(--primary-color);
+  }
+  
+  header nav ul li a:hover {
+    background: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
-}
-
-body{
-    color:var(--tertiary-color);
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-section{
-    padding: 60px;
-}
-
-.hero{
+  }
+  
+  /* HEADER / NAVBAR STYLES END */
+  
+  
+  
+  /* FOOTER STYLES START */
+  footer {
+    background: var(--primary-color);
+    padding: 40px 35px;
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    /*NOTE: width: 100%; means this element will be the full width of its parent*/
+  }
+  
+  footer h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  footer div {
+    line-height: 1.5;
+    text-align: right;
+  }
+  
+  footer a {
+    color: var(--secondary-color);
+  }
+  /* END FOOTER STYLES */
+  
+  /* STYLE ALL SECTION TAGS */
+  section {
+    padding: 60px;
+  }
+  
+  /* HERO STYLES START */
+  .hero {
+    background-image: url('../images/hero-bg-flipped.jpg');
+    background-size: cover;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("../images/hero-bg-flipped.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.hero label{
-    margin: 0 5px;
-}
-
-.hero-cta{
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+  }
+  
+  .hero-cta {
     width: 35%;
     text-align: right;
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
     line-height: 1.2;
-}
-.hero-cta h2{
+  }
+  
+  .hero-cta h2 {
     font-style: italic;
     font-size: 55px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-
-.signUp{
-    background-color: rgb(252, 225, 56, 0.8);
+  }
+  
+  .hero-form {
     border: 3px solid var(--secondary-color);
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 225, 56, 0.8);
     padding: 20px;
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     width: 40%;
     margin: 3.5%;
-}
-.signUp h3{
-    margin: 5px 0 15px 0;
-    font-size:  24px;
-}
-
-.formInp{
-    border: 1px solid var(--secondary-color);
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-form button:hover {
+    background-color: var(--tertiary-color);  
+  }
+  
+  .hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .hero-form p {
+    margin: 5px 0 15px 0;
+  }
+  
+  .form-input {
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     width: 100%;
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.formInp:focus{
-    background-color: rgba(255, 255, 255, 1);
-}
-
-
-/* RADIO BUTTON AND CHECKBOX STYLING */
-.checkbox-wrapper, .radio-wrapper{
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+  }
+  
+  .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
+  
+  .hero-form label {
+    margin: 0 5px;
+  }
+  
+  .hero-form button {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  } 
+  
+  .checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+  }
+  
+  .checkbox-wrapper label, .radio-wrapper label {
     position: relative;
     left: 10px;
     margin: 10px;
     line-height: 1.6;
-}
-
-.checkbox-wrapper input, .radio-wrapper input{
-    opacity: 0;
-}
-
-.checkbox-wrapper label::before, .radio-wrapper label::before{
+  }
+  
+  .checkbox-wrapper label::before, .radio-wrapper label::before {
     content: "";
     height: 20px;
     width: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid var(--secondary-color);
+    background: rgba(255, 255, 255, 0.75);  
+    border: 1px solid var(--secondary-color);  
     position: absolute;
     top: -4px;
     left: -30px;
+  }
+  
+  .radio-wrapper label::before {
     border-radius: 50%;
-}
-
-.radio-wrapper label::after{
+  }
+  
+  .radio-wrapper label::after {
     content: "";
-    width: 20px;
     height: 20px;
+    width: 20px;
     border-radius: 50%;
     background: var(--secondary-color);
     position: absolute;
-    left: -26px;
-    top: 1px;
-    /* Gradient blue color on the radio button */
+    left: -29px;
+    top: -3px;
     background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
-}
-
-.checkbox-wrapper label::after{
+  }
+  
+  .checkbox-wrapper label::after {
     content: "";
     height: 6px;
     width: 14px;
@@ -184,331 +244,358 @@ section{
     position: absolute;
     left: -26px;
     top: 1px;
-    transform: rotate(-50deg);
-}
-
-.checkbox-wrapper input:checked + label, .radio-wrapper input:checked + label{
+    transform: rotate(-58deg);
+  }
+  
+  .checkbox-wrapper input + label::after, 
+  .radio-wrapper input + label::after {
     content: none;
-}
-
-.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after{
+  }
+  
+  .checkbox-wrapper input:checked + label::after, 
+  .radio-wrapper input:checked + label::after {
     content: "";
-}
-
-
-button{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    font-size: 16px;
-}
-
-.sectionTitle{
+  }
+  /* HERO STYLES END */
+  
+  
+  /* SECTION TITLE STYLES START */
+  .section-title {
     font-size: 48px;
-    color:var(--secondary-color);
+    border-bottom: 3px solid;
+    color: var(--secondary-color);
     padding-bottom: 20px;
     text-align: center;
     margin: 0 auto 35px auto;
     width: 50%;
-    border-bottom: 3px solid;
-}
-.primaryBorder{
+  }
+  
+  .primary-border {
     border-color: var(--primary-color);
-}
-.secondaryBorder{
-    border-color:var(--tertiary-color)
-}
-
-.intro p{
-    text-align: center;
+  }
+  
+  .secondary-border {
+    border-color: var(--tertiary-color);
+  }
+  /* SECTION TITLE STYLES END */
+  
+  /* WHAT WE DO STYLES */
+  .intro p {
+    line-height: 1.7;
+    color: var(--tertiary-color);
     width: 80%;
     margin: 0 auto;
-        /*margin: auto 0; fies the centering issue that occurs when you center text
-        and then lessen its width*/
-}
-
-.steps{
-    background-color: var(--primary-color);
-}
-.step{
+      /*margin: auto 0; fies the centering issue that occurs when you center text
+      and then lessen its width*/
+    font-size: 20px;
+    text-align: center;
+  }
+  /* WHAT YOU DO STYLES END */
+  
+  
+  /* WHAT YOU DO STYLES START */
+  .steps { 
+    background: var(--primary-color);
+  }
+  
+  .step {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid var(--tertiary-color);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-}
-.step:last-child{
-    /* Alternatively could use the selector ".step:not(:last-child){}", but it didn't work for me this time. :'D */
+  }
+  
+  .step:last-child {
+    /* Alternatively could use the selector ".step:not(:last-child){}" */
     border-bottom: none;
-}
-.step-img{
-    flex: 1 12%;
-    margin-right: 20px;
-}
-.step-img img{
-    width: 200px;
-}
-.step h3{
-    flex: 1 30%;
+  }
+  
+  .step h3 {
     color: var(--secondary-color);
     font-size: 46px;
-}
-
-.step-text{
-    flex: 12;
-}
-.step-text h4{
-    font-size: 26px;
-    line-height: 1.5px;
-    color: var(--secondary-color);
-}
-.step-text p{
-    color:var(--tertiary-color);
-    font-size: 18px;
-    padding: 15px;
-}
-.step-info{
+    flex: 1 30%;
+  }
+  
+  .step-info {
+    flex: 2 70%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex: 2 70%;
-}
-
-.trainers{
+  }
+  
+  .step-img {
+    flex: 1 12%;
+    margin-right: 20px;
+  }
+  
+  .step-img img {
+    max-width: 100%;
+  }
+  
+  .step-text {
+    flex: 12;
+  }
+  
+  .step-text p {
+    color: var(--tertiary-color);
+    font-size: 18px;
+  }
+  
+  .step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+  }
+  /* WHAT YOU DO STYLES END */
+  
+  /* MEET THE TRAINERS START */
+  .trainers {
     width: 100%;
-    display: flex;
     margin: 0 auto;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.trainer{
-    flex: 1;
+  }
+  
+  .trainer {
     margin: 20px;
-    background-color: var(--secondary-color);
-    color:var(--primary-color);
-}
-.trainer img{
+    flex: 1;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  .trainer img {
     width: 100%;
-}
-.trainerBio{
+  }
+  
+  .trainer-bio {
     padding: 25px;
     line-height: 1.3;
-}
-.trainerBio h3{
+  }
+  
+  .trainer-bio h3 {
     font-size: 28px;
-}
-.trainerBio h4{
+  }
+  
+  .trainer-bio h4 {
     font-weight: lighter;
-    font-size: 15px;
-}
-.trainerBio p{
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .trainer-bio p {
     font-size: 17px;
-}
-
-.textLeft{
-    text-align: left;
-}
-.textRight{
-    text-align: right;
-}
-.flex-row{
-    display: flex;
-}
-
-.contact{
-    background-color: var(--secondary-color);
-}
-.contact h2{
-    color:var(--primary-color);
-}
-.contactInfo{
+  }
+  /* TRAINER STYLES END */
+  
+  /* REACH OUT STYLES START */
+  .contact {
+    background: var(--secondary-color);
+  }
+  
+  .contact h2 {
+    color: var(--primary-color);
+  }
+  
+  .contact-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.contactInfo > *{
+  }
+  
+  .contact-info > * {
     flex: 1;
     margin: 15px;
-}
-.contactInfo iframe{
-    width: 400px;
+  }
+  
+  .contact-info iframe {
     height: 400px;
-    border-style: 0;
-}
-.contactInfo div{
-    width: 410px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 30px 0 0 60px;
+  }
+  
+  .contact-info div {
     color: white;
-}
-.contactInfo h3{
+  }
+  
+  .contact-info h3 {
     color: var(--primary-color);
     font-size: 32px;
-}
-.contactInfo p, .contactInfo address{
+  }
+  
+  .contact-info p, .contact-info address {
     margin: 20px 0;
+    line-height: 1.5;
     font-size: 16px;
     font-style: normal;
-}
-.contactInfo a{
-    color: var(--primary-color);
-}
-
-.contact-form input, .contact-form textarea{
+  }
+  
+  .contact-form input, .contact-form textarea {
     border: 1px solid var(--secondary-color);
-    border-radius: 15px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
     color: var(--secondary-color);
-    width: 95%;
+    width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    background-color: rgba(255, 255, 255, 0.75);
-}
-.contact-form input:hover, .contact-form textarea{
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.contact-form button{
-    width: 95%;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
+  
+  .contact-form button {
+    width: 100%;
     border: none;
-    border-radius: 15px;
-    background:var(--primary-color);
+    background: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-}
-
-.contact-form button:hover{
-    background-color: var(--tertiary-color);
-}
-
-footer{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: var(--primary-color);
-    width: 100%;
-        /*NOTE: width: 100%; means this element will be the full width of its parent*/
-    padding: 40px 35px;
-    /*Why is the padding necessary when we've already
-    gotten rid of all marigns/padding with the * selector?*/
-}
-footer h2{
-    color: var(--secondary-color);
-    font-size: 30px;
-    margin: 0;
-    /*Why is margin: 0; necessary when the margin
-    for the entire page is 0 already?*/
-}
-footer div{
-    line-height: 1.5;
+    border-radius: 10px;
+  }
+  
+  .contact-form button:hover {
+    color: var(--primary-color);
+    background: var(--tertiary-color);
+  }
+  
+  .contact-info a {
+    color: var(--primary-color);
+  }
+  /* REACH OUT STYLES END */
+  
+  /* UTILITIES */
+  .text-left {
+    text-align: left;
+  }
+  
+  .text-right {
     text-align: right;
-}
-footer a{
-    color: var(--secondary-color);
-}
-
-/* MEDIA QUERIES FOR SMALLER DESKTOP SCREENS AND/OR SMALLER */
-/* Media queries should be written from largest width to smallest when using max-width.
-Doing so will order create an order hierarchy for CSS, telling it which styles to
-impliment first as the scrrens gets smaller */
-@media screen and (max-width:980px){
-    header{
-        padding-bottom: 0;
-        justify-content: center;
-        position: relative;
+  }
+  
+  .flex-row {
+    display: flex;
+  }
+  
+  /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+  /* Media queries should be written from largest width to smallest when using max-width.
+  Doing so will order create an order hierarchy for CSS, telling it which styles to
+  impliment first as the scrrens gets smaller */
+  @media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
     }
-    header h1{
-        width: 100%;
-        text-align: center;
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
     }
+  
     header nav ul {
-        margin-top: 20px;
-        width: 100%;
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
     }
-    header nav ul li a{
-        font-size: 20px;
+  
+    header nav ul li a {
+      font-size: 20px;
     }
-
-    footer h2, footer div{
-        text-align: center;
-        width:  100%;
+  
+    footer h2, footer div {
+      text-align: center;
+      width: 100%;
     }
-    .hero-cta, .hero-form{
-        width: 100%;
+  
+    .hero-cta, .hero-form {
+      width: 100%;
     }
-    .hero-cta{
-        text-align: center;
+    
+    .hero-cta {
+      text-align: center;
     }
-    .section-title{
-        width: 80%;
+  
+    .section-title {
+      width: 80%;
     }
-    .trainer{
-        flex: 0 70%;
+    
+    .trainer {
+      flex: 0 70%;
     }
+    
     .contact-info iframe{
-        flex: 1 100%;
+      flex: 1 100%;
     }
-}
-
-/* MEDIA QUERIES FOR TABLETS AND/OR SMALLER */
-@media screen and (max-width:768px){
-    section{
-        padding: 30px 15px;
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    section {
+      padding: 30px 15px;
     }
-    .step h3{
-        flex: 1 100%;
-        text-align: center;
-        justify-content: center;
+  
+    .step h3 {
+      flex: 1 100%;
+      text-align: center;
     }
-    .step-info{
-        flex: 2 100%;
-        text-align: center;
-        justify-content: center;
+  
+    .step-info {
+      flex: 2 100%;
+      text-align: center;
+      justify-content: center;
     }
-    .step-img{
-        flex: 0 32%;
-        margin-right: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
+  
+    .step-img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
-    .step-text{
-        flex: 100%;
+  
+    .step-text {
+      flex: 100%;  
     }
-}
-
-
-/* MEDIA QUERIES FOR MOBILE PHONES AND/OR SMALLER */
-@media screen and (max-width:575px){
-    .hero-form button{
-        width: 100%;
+  
+    .trainer-bio h3, .trainer-bio h4 {
+      display: block;
     }
-    .section-title{
-        width: 95%;
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .hero-form button {
+      width: 100%;
     }
-    .intro p{
-        width: 100%;
+  
+    .section-title {
+      width: 95%;
     }
-    .trainer{
-        flex: 0 100%;
+  
+    .intro p {
+      width: 100%;
     }
-    .contact-info{
-        text-align: center;
+  
+    .trainer {
+      flex: 0 100%;
     }
-    .contact-info > *{
-        flex: 0 100%;
+  
+    .contact-info {
+      text-align: center;
     }
-    .contact-form{
-        order: 3;
+  
+    .contact-info > * {
+      flex: 0 100%;
     }
-}
+  
+    .contact-form {
+      order: 3;
+    }
+  }
+  
